@@ -14,7 +14,8 @@ const SexSelect:React.FC<{setsex:React.Dispatch<React.SetStateAction<string | nu
             return setsex("หญิง")
         }
         if(sexstate === "other"){
-            return setsex("หญิง")
+            if(inputcontrol){
+            return setsex(inputcontrol)}
         }
     }
     return(
