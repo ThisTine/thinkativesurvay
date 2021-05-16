@@ -71,7 +71,8 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
     <Grid templateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(3,1fr)"]} mt={10} gap={5} >
         {formarr.map(item=>{
             return(
-                <Link href={item.sex || item.age ? `${item.link}?usp=pp_url&${item.sex}=${sex}&${item.age}=${age}` : item.link} isExternal={true} _hover={{textDecoration:"none"}} key={item.link} >
+                <Link href={item.sex && item.age ? sex === "ชาย" || sex === "หญิง" ?  `${item.link}?usp=pp_url&${item.sex}=${sex}&${item.age}=${age}` 
+                : `${item.link}?usp=pp_url&${item.sex}=__other_option__&${item.sex}.other_option_response=${sex}&${item.age}=${age}` : item.link} isExternal={true} _hover={{textDecoration:"none"}} key={item.link} >
                 <Box w="100%" bg="white" rounded="3xl" d="flex" flexDir="column"  boxShadow="lg" minH="xs" h="100%"  _hover={{boxShadow:"xl"}} > 
                 <Box bg={`url(${item.img})`}  roundedTop="xl"  bgSize="cover" minH="50px" h="40%" w="100%"></Box>
                     <Heading p={5} h="fit-content" w="fit-content">{item.name}</Heading>
