@@ -53,10 +53,11 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
           <ModalHeader>คุณคือ ?</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Link isExternal href="https://docs.google.com/forms/d/e/1FAIpQLSeSnyJY2OXsznzDV6lzAlfKNKFhRcIVQyMTAkbftf34O_NPvg/viewform">
+            <Link isExternal href={sex === "ชาย" || sex === "หญิง" ?  `https://docs.google.com/forms/d/e/1FAIpQLSeSnyJY2OXsznzDV6lzAlfKNKFhRcIVQyMTAkbftf34O_NPvg/viewform?usp=pp_url&entry.965824433=${sex}&entry.754265930=${age}` : `https://docs.google.com/forms/d/e/1FAIpQLSeSnyJY2OXsznzDV6lzAlfKNKFhRcIVQyMTAkbftf34O_NPvg/viewform?usp=pp_url&entry.965824433=__other_option__&entry.965824433.other_option_response=${sex}&entry.754265930=${age}`} 
+                _hover={{textDecoration:"none"}}>
             <Button size="lg" w="100%" mb={10} colorScheme="yellow"> ผู้ใช้บริการ</Button>
             </Link>
-            <Link isExternal href="https://docs.google.com/forms/d/e/1FAIpQLScrMf3Rs96Jnxb_6ddTY6vUPTPx3n8nkeZXCj10SrwTXOed-g/viewform">
+            <Link  isExternal href="https://docs.google.com/forms/d/e/1FAIpQLScrMf3Rs96Jnxb_6ddTY6vUPTPx3n8nkeZXCj10SrwTXOed-g/viewform"  >
             <Button size="lg" colorScheme="teal" w="100%"> ผู้ประกอบการ</Button>
             </Link>
 
@@ -94,6 +95,6 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
     </>)
 }
 
-export {}
+// export {}
 
 export default FormSelect 
