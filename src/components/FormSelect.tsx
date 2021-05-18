@@ -10,6 +10,7 @@ import {
     ModalBody,
     ModalCloseButton,
   } from "@chakra-ui/react"
+import InfoBox from "./InfoBox"
 interface linkobj {
     img:string,
     link: string,
@@ -68,6 +69,7 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
           </ModalFooter>
         </ModalContent>
       </Modal>
+      <InfoBox age={age} sex={sex} />
     <Grid templateColumns={["repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(3,1fr)"]} mt={10} gap={5} >
         {formarr.map(item=>{
             return(
@@ -91,5 +93,7 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
     </Grid>
     </>)
 }
+
+export {}
 
 export default FormSelect 
