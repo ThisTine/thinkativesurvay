@@ -53,7 +53,7 @@ const FormSelect:React.FC<{sex:string,age:string}> = ({sex,age})=>{
           <ModalHeader>คุณคือ ?</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Link isExternal href="https://docs.google.com/forms/d/e/1FAIpQLScrMf3Rs96Jnxb_6ddTY6vUPTPx3n8nkeZXCj10SrwTXOed-g/viewform">
+            <Link isExternal href="https://docs.google.com/forms/d/e/1FAIpQLSeSnyJY2OXsznzDV6lzAlfKNKFhRcIVQyMTAkbftf34O_NPvg/viewform">
             <Button size="lg" w="100%" mb={10} colorScheme="yellow"> ผู้ใช้บริการ</Button>
             </Link>
             <Link isExternal href="https://docs.google.com/forms/d/e/1FAIpQLScrMf3Rs96Jnxb_6ddTY6vUPTPx3n8nkeZXCj10SrwTXOed-g/viewform">
